@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TkuCircle</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+      <div class="container">
+        <%= link_to("TweetApp", root_path, class: "navbar-brand" ) %>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="ナビゲーションの切替">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <%= link_to("TweetAppとは", about_path, class: "nav-link") %>
+              <%= link_to("新規投稿", new_post_path, class: "nav-link") %>
+              <%= link_to "投稿一覧", posts_path, class:"nav-link"  %>
+              <%= link_to "user", users_path, class:"nav-link" %>
+              <%= link_to "新規登録", new_user_path, class:"nav-link" %>
+            </li>
+          </ul>
+        </div>     
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
