@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save
-    redirect_to posts_path
+    redirect_to @post
   end
 
   def edit
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   private
-  def posts_params
+  def post_params
     params.require(:post).permit(:body)
   end
 end

@@ -19,6 +19,9 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def login
+    @user = User.find(params[email: params[:email], password: params[:password]])
+  end
   private
 
   def user_params
