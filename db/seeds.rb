@@ -8,3 +8,6 @@
 Post.create(
   body: "1234556677"
 )
+Post.create(
+  body: "hello"
+)
